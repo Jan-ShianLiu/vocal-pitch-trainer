@@ -1,0 +1,20 @@
+{
+  "formatVersion": 1,
+  "id": "my-song-single-line",
+  "title": "歌曲名稱",
+  "artist": "歌手名稱",
+  "language": "zh-TW",
+  "genre": "Mandopop",
+  "vocalGender": "male",
+  "tags": ["中文", "流行"],
+  "bpm": 80,
+  "key": "C major",
+  "phrase": "一句短歌詞",
+  "source": "https://合法樂譜或資料來源網址",
+  "notes": [
+    { "pitch": "C4", "beats": 1, "lyric": "一" },
+    { "pitch": "D4", "beats": 0.5, "lyric": "句" },
+    { "rest": true, "beats": 0.5, "lyric": "" },
+    { "pitch": "E4", "beats": 2, "lyric": "詞" }
+  ]
+}

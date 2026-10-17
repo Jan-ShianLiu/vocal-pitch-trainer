@@ -1,0 +1,50 @@
+{
+  "formatVersion": 1,
+  "id": "replace-with-unique-song-id",
+  "title": "歌曲名稱",
+  "artist": "歌手名稱",
+  "language": "zh-TW",
+  "genre": "Mandopop",
+  "vocalGender": "female",
+  "year": 2026,
+  "tags": ["中文", "流行"],
+  "bpm": 80,
+  "key": "C major",
+  "source": "",
+  "sections": [
+    {
+      "id": "verse-1",
+      "type": "verse",
+      "name": "主歌 1",
+      "lines": [
+        {
+          "id": "verse-1-line-1",
+          "lyric": "主歌歌詞範例",
+          "tags": ["中速"],
+          "metadata": { "difficulty": "normal" },
+          "notes": [
+            { "pitch": "C4", "beats": 1, "lyric": "主" },
+            { "pitch": "D4", "beats": 1, "lyric": "歌" },
+            { "pitch": "E4", "beats": 2, "lyric": "詞" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chorus-1",
+      "type": "chorus",
+      "name": "副歌",
+      "lines": [
+        {
+          "id": "chorus-1-line-1",
+          "lyric": "副歌歌詞範例",
+          "notes": [
+            { "pitch": "G4", "beats": 1, "lyric": "副" },
+            { "pitch": "A4", "beats": 1, "lyric": "歌" },
+            { "pitch": "G4", "beats": 2, "lyric": "詞" }
+          ]
+        }
+      ]
+    }
+  ]
+}

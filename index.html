@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0a1020" />
+    <title>Vocal Flow｜唱歌音準練習</title>
+    <meta
+      name="description"
+      content="用麥克風練習單音、音階與旋律，搭配即時音高軌跡與音準判定。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="song.css" />
+  </head>
+  <body>
+    <div class="stage-beams" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <main class="shell">
+      <header>
+        <a class="brand" href="#" aria-label="Vocal Flow 首頁">
+          <span class="brand-mark">♪</span><span>Vocal Flow</span>
+        </a>
+        <div class="header-status">
+          <span class="status-dot"></span
+          ><span id="micStatus">麥克風未連線</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">PITCH TRAINING STUDIO</p>
+          <h1>看見你的聲音，<br /><em>唱準每一個音。</em></h1>
+        </div>
+        <div class="hero-side">
+          <div class="equalizer" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p class="hero-copy">
+            從單音到完整旋律，鋼琴先示範、你再跟唱。即時音高軌跡會告訴你偏高、偏低，或剛剛好。
+          </p>
+        </div>
+      </section>
+
+      <nav class="levels" aria-label="練習關卡">
+        <button class="level active" data-level="1">
+          <span>01</span><b>單音</b><small>Pitch match</small>
+        </button>
+        <button class="level" data-level="2">
+          <span>02</span><b>爬音階</b><small>Scale run</small>
+        </button>
+        <button class="level" data-level="3">
+          <span>03</span><b>資料夾歌曲</b><small>Local song files</small>
+        </button>
+        <button class="level" id="battleTabBtn">
+          <span>VS</span><b>多人對戰</b><small>Battle Mode</small>
+        </button>
+      </nav>
+
+      <section class="exercise-options" id="rangeOptions">
+        <div class="option-copy">
+          <b>練習音域</b>
+          <span>題目只會使用這個範圍內的音高</span>
+        </div>
+        <div class="range-fields">
+          <label>最低音<select id="rangeMin"></select></label>
+          <span>～</span>
+          <label>最高音<select id="rangeMax"></select></label>
+        </div>
+      </section>
+
+      <section class="song-options" id="songOptions" hidden>
+        <div class="song-options-head">
+          <div class="option-copy">
+            <span class="filter-kicker">LEVEL 3 SONG LIBRARY</span>
+            <b>建立你的練唱題庫</b>
+            <span id="songLibraryStatus">正在讀取歌曲目錄</span>
+          </div>
+          <div class="song-file-actions">
+            <button class="folder-button" id="songImportBtn" type="button">＋ 匯入歌曲 JSON</button>
+            <button class="folder-button subtle" id="songClearBtn" type="button">清除匯入</button>
+          </div>
+        </div>
+        <div class="filter-grid">
+          <label class="filter-field"><span>段落</span><select id="songScope"><option value="all">全部段落</option><option value="chorus">只要副歌</option></select></label>
+          <details class="filter-menu" id="artistFilterMenu">
+            <summary><span>歌手</span><b id="artistFilterSummary">全部歌手</b></summary>
+            <div class="filter-popover">
+              <input id="artistSearch" type="search" placeholder="搜尋歌手…" autocomplete="off" />
+              <label class="check-row all-row"><input id="artistAll" type="checkbox" checked /> 全部歌手</label>
+              <div class="check-list" id="artistChoices"></div>
+            </div>
+          </details>
+          <details class="filter-menu" id="genderFilterMenu">
+            <summary><span>演唱類型</span><b id="genderFilterSummary">全部類型</b></summary>
+            <div class="filter-popover">
+              <label class="check-row all-row"><input id="genderAll" type="checkbox" checked /> 全部類型</label>
+              <label class="check-row"><input class="gender-choice" type="checkbox" value="male" /> 男聲</label>
+              <label class="check-row"><input class="gender-choice" type="checkbox" value="female" /> 女聲</label>
+              <label class="check-row"><input class="gender-choice" type="checkbox" value="duet" /> 男女合唱</label>
+              <label class="check-row"><input class="gender-choice" type="checkbox" value="group" /> 團體／多人</label>
+            </div>
+          </details>
+          <label class="filter-field wide song-picker"><span>指定歌曲</span><input id="songSearch" type="search" placeholder="輸入歌名或歌手搜尋…" autocomplete="off" /><select id="songSelect" aria-label="指定一首歌曲"><option value="">全部歌曲</option></select></label>
+          <div class="filter-field range-filter"><span>BPM 範圍</span><div><input id="filterBpmMin" type="number" min="30" max="240" value="30" aria-label="最低 BPM" /><i>～</i><input id="filterBpmMax" type="number" min="30" max="240" value="240" aria-label="最高 BPM" /></div></div>
+          <div class="filter-field range-filter"><span>整句音域</span><div><select id="filterPitchMin" aria-label="最低音"></select><i>～</i><select id="filterPitchMax" aria-label="最高音"></select></div></div>
+          <div class="filter-field range-filter"><span>歌詞字數</span><div><input id="filterLyricMin" type="number" min="0" max="200" value="0" aria-label="最少字數" /><i>～</i><input id="filterLyricMax" type="number" min="1" max="200" value="200" aria-label="最多字數" /></div></div>
+        </div>
+        <div class="filter-footer"><span id="filterResult">等待歌曲資料</span><div><button class="folder-button subtle" id="resetFiltersBtn" type="button">重設條件</button><button class="apply-filter" id="applyFiltersBtn" type="button">套用並換一題</button></div></div>
+        <input
+          id="songImportInput"
+          type="file"
+          accept=".json,application/json"
+          multiple
+          hidden
+        />
+      </section>
+
+      <section class="exercise-options" id="battleOptions" hidden>
+        <div class="option-copy">
+          <b>對戰設定</b>
+          <span>與朋友輪流挑戰，比拼音準</span>
+        </div>
+        <div class="range-fields">
+          <label>玩家<select id="battlePlayerCount">
+            <option value="2">2 人</option>
+            <option value="3">3 人</option>
+            <option value="4">4 人</option>
+            <option value="5">5 人</option>
+          </select></label>
+          <label>輪數<select id="battleRoundCount">
+            <option value="1">1 輪</option>
+            <option value="2">2 輪</option>
+            <option value="3" selected>3 輪</option>
+            <option value="5">5 輪</option>
+          </select></label>
+          <label>難度<select id="battleLevelSelect">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+          </select></label>
+          <button class="folder-button" id="startBattleBtn">開始對戰</button>
+        </div>
+      </section>
+
+      <section class="studio">
+        <div class="studio-head">
+          <div>
+            <div class="stage-tag" id="stageTag">LEVEL 01 · 單音練習</div>
+            <div class="battle-banner" id="battleBanner" hidden>
+              <strong id="battleTurnText">玩家 1 的回合</strong>
+              <span id="battleRoundText">第 1 / 3 輪</span>
+            </div>
+            <h2 id="exerciseTitle">準備好聽音了嗎？</h2>
+            <p id="exerciseHint">系統會在 C3～D5 之間隨機選一個音。</p>
+          </div>
+          <div class="studio-metrics">
+            <div class="daily-goal">
+              <span>本日目標</span><strong id="goalProgress">0 / 30</strong>
+            </div>
+            <div class="score-ring" id="scoreRing">
+              <strong id="scoreValue">—</strong><span>音準</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-now">
+          <div>
+            <span>目前音高</span><strong id="currentNote">—</strong
+            ><small id="currentFreq">等待聲音</small>
+          </div>
+          <div class="tuner">
+            <span>偏低</span>
+            <div class="tuner-line"><i id="tunerNeedle"></i></div>
+            <span>偏高</span>
+          </div>
+          <div class="target-box">
+            <span>目標</span><strong id="targetNote">—</strong>
+          </div>
+        </div>
+
+        <div class="roll-wrap">
+          <canvas id="pitchRoll" aria-label="即時音高軌跡圖"></canvas>
+          <div class="roll-legend">
+            <span><i class="target-key"></i>目標音</span
+            ><span><i class="voice-key"></i>你的聲音</span
+            ><span>音符依實際時值亮起</span>
+          </div>
+        </div>
+
+        <div class="feedback" id="feedback" aria-live="polite">
+          <span class="feedback-icon">◌</span>
+          <div>
+            <b>尚未開始</b><small>戴上耳機可避免示範音被麥克風收到</small>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="secondary" id="demoBtn" disabled>
+            <span>▶</span> 只聽示範
+          </button>
+          <button class="primary" id="startBtn">
+            <span class="mic-icon">●</span> 開始錄音
+          </button>
+          <button class="secondary" id="replayBtn" disabled>
+            <span>↺</span> 重播我的聲音
+          </button>
+          <button class="secondary" id="newBtn"><span>↻</span> 換一題</button>
+        </div>
+      </section>
+
+      <section class="tips">
+        <article>
+          <span>01</span>
+          <div>
+            <b>先聽示範</b>
+            <p>鋼琴會先播放一次完整目標。</p>
+          </div>
+        </article>
+        <article>
+          <span>02</span>
+          <div>
+            <b>再跟著唱</b>
+            <p>橘線在目標帶內維持越久越準。</p>
+          </div>
+        </article>
+        <article>
+          <span>03</span>
+          <div>
+            <b>看軌跡修正</b>
+            <p>線條向上是偏高，向下則是偏低。</p>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <span>Vocal Flow</span>
+        <p>
+          GitHub Pages 會自動掃描 songs 內的歌曲 JSON · 鋼琴音色：Salamander Grand
+          Piano · 音高判定會受環境噪音與麥克風品質影響
+        </p>
+      </footer>
+    </main>
+    <div class="goal-toast" id="goalToast" role="status" aria-live="polite" hidden>
+      <span>✓</span>
+      <div><b>本日目標達成！</b><small id="goalToastText"></small></div>
+    </div>
+    
+    <div class="goal-toast battle-results" id="battleResultModal" role="dialog" aria-modal="true" hidden>
+      <div class="battle-results-content">
+        <h2>🏆 對戰結算</h2>
+        <div id="battleScoreBoard"></div>
+        <button class="primary" id="endBattleBtn">結束對戰</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
