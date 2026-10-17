@@ -1,0 +1,118 @@
+{
+  "formatVersion": 1,
+  "id": "jianpu-space-133-42",
+  "title": "我要電腦",
+  "artist": "陳羿豐",
+  "language": "zh-TW",
+  "genre": "Mandopop",
+  "vocalGender": "male",
+  "tags": [
+    "簡譜空間",
+    "Mandopop"
+  ],
+  "bpm": 120,
+  "key": "G major",
+  "source": "https://jianpu.space/zh-tw/songList/42",
+  "metadata": {
+    "sourceImage": "screenshot_133_jianpu.space.png",
+    "sourceArtistText": "陳羿豐",
+    "numberedNotationTonic": "1=G4",
+    "keyBasis": "Read from the /key(...) directive in the source notation.",
+    "bpmBasis": "No BPM directive in the source; 120 BPM is used as the documented fallback.",
+    "sectionBasis": "Verse/chorus form is not asserted for this traditional, children's, school, anthem, hymn, exercise, or otherwise non-pop-form item.",
+    "transcriptionRule": "Hyphens are folded into note duration. Same-pitch continuation notes for one lyric are merged; different-pitch melismas are retained with an empty lyric.",
+    "timeSignatureInferred": "4/4",
+    "controlNotationRule": "Key-change markers are removed from lyric text and applied cumulatively to the marked note and all following notes, matching the source parser. Structural labels such as intro/interlude are not treated as sung lyrics.",
+    "sectionResearch": {
+      "checkedAt": "2026-10-17",
+      "method": "not-applicable-non-pop-form",
+      "confidence": "not-applicable",
+      "sources": []
+    },
+    "lineBreakResearch": {
+      "checkedAt": "2026-10-17",
+      "method": "public-synchronized-lyric-line-alignment",
+      "provider": "NetEase Cloud Music public synchronized lyrics",
+      "source": "https://music.163.com/#/song?id=28182183",
+      "matchedTitle": "第17课 我想要台电脑",
+      "matchedArtist": "日语听力",
+      "sourceLyricCoverage": 0.4667,
+      "confidenceGatePassed": false,
+      "splitOriginalLineCount": 0,
+      "createdAdditionalLineCount": 0,
+      "preservationChecks": {
+        "lyrics": "unchanged",
+        "notesPitchBeatsLyricsAndOrder": "unchanged"
+      }
+    }
+  },
+  "sections": [
+    {
+      "id": "other-1",
+      "type": "other",
+      "name": "其他 1",
+      "lines": [
+        {
+          "id": "score-line-001",
+          "lyric": "我要電腦我要電腦",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "B4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "B4",
+              "beats": 0.5,
+              "lyric": "電"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "腦"
+            },
+            {
+              "pitch": "B4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "電"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B4",
+              "beats": 1,
+              "lyric": "腦"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 1,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        }
+      ]
+    }
+  ]
+}

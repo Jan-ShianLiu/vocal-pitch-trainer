@@ -1,0 +1,3237 @@
+{
+  "formatVersion": 1,
+  "id": "jianpu-space-036-65392b97bbc8d3f848b6a6f2",
+  "title": "冷暴力",
+  "artist": "蔡依林",
+  "language": "zh-TW",
+  "genre": "Mandopop",
+  "vocalGender": "female",
+  "tags": [
+    "簡譜空間",
+    "Mandopop"
+  ],
+  "bpm": 130,
+  "key": "F major",
+  "source": "https://jianpu.space/zh-tw/songList/65392b97bbc8d3f848b6a6f2",
+  "metadata": {
+    "sourceImage": "screenshot_036_jianpu.space.png",
+    "sourceArtistText": "蔡依林",
+    "numberedNotationTonic": "1=F3",
+    "keyBasis": "Read from the /key(...) directive in the source notation.",
+    "bpmBasis": "Read from the BPM directive in the source notation.",
+    "sectionBasis": "Each sung line was checked against the exact song's public labelled lyrics or chord/lyric form; section labels were rebuilt from that source rather than inferred from the previous JSON.",
+    "transcriptionRule": "Hyphens are folded into note duration. Same-pitch continuation notes for one lyric are merged; different-pitch melismas are retained with an empty lyric.",
+    "timeSignatureInferred": "4/4",
+    "controlNotationRule": "Key-change markers are removed from lyric text and applied cumulatively to the marked note and all following notes, matching the source parser. Structural labels such as intro/interlude are not treated as sung lyrics.",
+    "sectionResearch": {
+      "checkedAt": "2026-10-17",
+      "method": "manual-source-verified-form",
+      "confidence": "high",
+      "sources": [
+        "https://www.mulanci.org/lyric/sl27701/"
+      ],
+      "sourceLyricLineCoverage": 0
+    },
+    "lineBreakResearch": {
+      "checkedAt": "2026-10-17",
+      "method": "public-synchronized-lyric-line-alignment",
+      "provider": "NetEase Cloud Music public synchronized lyrics",
+      "source": "https://music.163.com/#/song?id=209639",
+      "matchedTitle": "冷 暴力",
+      "matchedArtist": "蔡依林",
+      "sourceLyricCoverage": 0.9405,
+      "confidenceGatePassed": true,
+      "splitOriginalLineCount": 14,
+      "createdAdditionalLineCount": 21,
+      "preservationChecks": {
+        "lyrics": "unchanged",
+        "notesPitchBeatsLyricsAndOrder": "unchanged"
+      }
+    }
+  },
+  "sections": [
+    {
+      "id": "verse-1",
+      "type": "verse",
+      "name": "主歌 1",
+      "lines": [
+        {
+          "id": "score-line-001",
+          "lyric": "你說我很愛講手機",
+          "notes": [
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "很"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1.5,
+              "lyric": "講"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "手"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "機"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 1,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-002",
+          "lyric": "可疑",
+          "notes": [
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "可"
+            },
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 1,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-003",
+          "lyric": "我想去朋友家打wii",
+          "notes": [
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "去"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "朋"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "友"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1.5,
+              "lyric": "家"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "打"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "wii"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 2,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-004",
+          "lyric": "不行",
+          "notes": [
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "行"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 2,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-005",
+          "lyric": "你老愛亂發神經",
+          "notes": [
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "老"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "亂"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "發"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "神"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": "經"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 3,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-006",
+          "lyric": "常常偷看我簡訊",
+          "notes": [
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "常"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "常"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "偷"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "看"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "簡"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1.5,
+              "lyric": "訊"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 3,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-007",
+          "lyric": "考驗我的耐性小心小心",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "考"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "驗"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "耐"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "性"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "小"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "心"
+            },
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "小"
+            },
+            {
+              "pitch": "A3",
+              "beats": 2,
+              "lyric": "心"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 4,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-008",
+          "lyric": "對付你讓空氣",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "對"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "付"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "讓"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "空"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "氣"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/5",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-009",
+          "lyric": "凍成",
+          "notes": [
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "凍"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "成"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/5",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-010",
+          "lyric": "北極",
+          "notes": [
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "北"
+            },
+            {
+              "pitch": "A3",
+              "beats": 2,
+              "lyric": "極"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/5",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-011",
+          "lyric": "吃飯時我故意耍自閉",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "吃"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "飯"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "時"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "故"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "意"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "耍"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "閉"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "4/5",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-012",
+          "lyric": "沉默不語",
+          "notes": [
+            {
+              "pitch": "A3",
+              "beats": 0.25,
+              "lyric": "沉"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.25,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "默"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G3",
+              "beats": 1.5,
+              "lyric": "語"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "5/5",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-013",
+          "lyric": "我使出冷暴力",
+          "notes": [
+            {
+              "pitch": "A#3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "使"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "出"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "力"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 6,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-014",
+          "lyric": "換你神經兮兮",
+          "notes": [
+            {
+              "pitch": "A#3",
+              "beats": 0.5,
+              "lyric": "換"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "G3",
+              "beats": 0.5,
+              "lyric": "神"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "經"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "兮"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "兮"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 6,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-015",
+          "lyric": "耍心機不理你",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "耍"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "心"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "機"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "理"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 7,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-016",
+          "lyric": "看看誰先贏",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "看"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "看"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "誰"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "先"
+            },
+            {
+              "pitch": "D4",
+              "beats": 2,
+              "lyric": "贏"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 7,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chorus-1",
+      "type": "chorus",
+      "name": "副歌 1",
+      "lines": [
+        {
+          "id": "score-line-017",
+          "lyric": "你說這是合理的懷疑OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "合"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "理"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "懷"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 8,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-018",
+          "lyric": "你說這是愛我的證明OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "證"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "明"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 9,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-019",
+          "lyric": "超強佔有慾別自己騙自己",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "強"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "慾"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 10,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-020",
+          "lyric": "我要用冷暴力冷凍你O-k",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "凍"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "O-"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "k"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 11,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-021",
+          "lyric": "別讓愛情喘不過氣Yaya",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "讓"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "情"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "喘"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "過"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "氣"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "Ya"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 12,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-022",
+          "lyric": "阿司匹林給你",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "阿"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "司"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "匹"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "林"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "給"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 13,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-023",
+          "lyric": "別自己騙自己",
+          "notes": [
+            {
+              "pitch": "F4",
+              "beats": 0.75,
+              "lyric": "別"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.75,
+              "lyric": "自"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 13,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-024",
+          "lyric": "冷暴力是最後武器OhYa",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "最"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "後"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "武"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "器"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "D4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 14,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-025",
+          "lyric": "冷卻你的火力OhYa",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "卻"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "火"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "力"
+            },
+            {
+              "rest": true,
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "G3",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 15,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "verse-2",
+      "type": "verse",
+      "name": "主歌 2",
+      "lines": [
+        {
+          "id": "score-line-026",
+          "lyric": "今天穿短裙",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "今"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "天"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "穿"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "短"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1.5,
+              "lyric": "裙"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/6",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-027",
+          "lyric": "不行",
+          "notes": [
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "行"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/6",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-028",
+          "lyric": "不行",
+          "notes": [
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G3",
+              "beats": 1,
+              "lyric": "行"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/6",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-029",
+          "lyric": "一直打噴嚏",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "一"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "直"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "打"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "噴"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1.5,
+              "lyric": "嚏"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "4/6",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-030",
+          "lyric": "是誰",
+          "notes": [
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "誰"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "5/6",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-031",
+          "lyric": "想你",
+          "notes": [
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F3",
+              "beats": 2,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "6/6",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-032",
+          "lyric": "簡單的問題",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "簡"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "單"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "問"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "題"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 17,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-033",
+          "lyric": "不需要疑心病",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "需"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "心"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "病"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 17,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-034",
+          "lyric": "冷暴力搞定你",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "力"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "搞"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "定"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 18,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-035",
+          "lyric": "治好你的病",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "治"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "好"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "D4",
+              "beats": 2,
+              "lyric": "病"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 18,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chorus-2",
+      "type": "chorus",
+      "name": "副歌 2",
+      "lines": [
+        {
+          "id": "score-line-036",
+          "lyric": "你說這是合理的懷疑OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "合"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "理"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "懷"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 19,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-037",
+          "lyric": "你說這是愛我的證明OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "證"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "明"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 20,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-038",
+          "lyric": "超強佔有慾別自己騙自己",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "強"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "慾"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 21,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-039",
+          "lyric": "我要用冷暴力冷凍你O-k",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "凍"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "O-"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "k"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 22,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-040",
+          "lyric": "你說這是合理的懷疑OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "合"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "理"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "懷"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 23,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-041",
+          "lyric": "你說這是愛我的證明OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "證"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "明"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 24,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-042",
+          "lyric": "超強佔有慾別自己騙自己",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "強"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "慾"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 25,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-043",
+          "lyric": "我要用冷暴力冷凍你O-k",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "凍"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "O-"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "k"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 26,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-044",
+          "lyric": "別讓愛情喘不過氣Yaya",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "讓"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "情"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "喘"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "過"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "氣"
+            },
+            {
+              "pitch": "A#3",
+              "beats": 0.5,
+              "lyric": "Ya"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 27,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-045",
+          "lyric": "阿司匹林給你",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "阿"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "司"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "匹"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "林"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "給"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 28,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-046",
+          "lyric": "別自己騙自己",
+          "notes": [
+            {
+              "pitch": "E4",
+              "beats": 0.75,
+              "lyric": "別"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.75,
+              "lyric": "自"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 28,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-047",
+          "lyric": "冷暴力是最後武器OhYa",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "最"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "後"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "武"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "器"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "D4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 29,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-048",
+          "lyric": "冷卻你的火力",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "卻"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "火"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "力"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 30,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-049",
+          "lyric": "冷暴力搞定你",
+          "notes": [
+            {
+              "pitch": "E4",
+              "beats": 0.75,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.75,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.75,
+              "lyric": "搞"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.75,
+              "lyric": "定"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 30,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-050",
+          "lyric": "別讓愛情喘不過氣Yaya",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "讓"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "情"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "喘"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "過"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "氣"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "Ya"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 31,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-051",
+          "lyric": "阿司匹林給你",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "阿"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "司"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "匹"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "林"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "給"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 32,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-052",
+          "lyric": "別自己騙自己",
+          "notes": [
+            {
+              "pitch": "E4",
+              "beats": 0.75,
+              "lyric": "別"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.75,
+              "lyric": "自"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "F4",
+              "beats": 1,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 32,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-053",
+          "lyric": "冷暴力是最後武器OhYa",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "最"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "後"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": "武"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "器"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "D4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 33,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-054",
+          "lyric": "冷卻你的火力",
+          "notes": [
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.5,
+              "lyric": "卻"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 1,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "火"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "力"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 34,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-055",
+          "lyric": "冷暴力搞定你",
+          "notes": [
+            {
+              "pitch": "C5",
+              "beats": 0.75,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.75,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "C5",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "D5",
+              "beats": 0.75,
+              "lyric": "搞"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.75,
+              "lyric": "定"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "你"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 34,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-056",
+          "lyric": "你說這是合理的懷疑OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "合"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "理"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "懷"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 35,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-057",
+          "lyric": "你說這是愛我的證明OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "證"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "明"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 36,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-058",
+          "lyric": "超強佔有慾別自己騙自己",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "強"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "慾"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 37,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-059",
+          "lyric": "我要用冷暴力冷凍你O-k",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "凍"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "O-"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "k"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 38,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-060",
+          "lyric": "你說這是合理的懷疑OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "合"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "理"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "懷"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "疑"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 39,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-061",
+          "lyric": "你說這是愛我的證明OhYa",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "說"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "這"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "證"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "明"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Ya"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 40,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-062",
+          "lyric": "超強佔有慾別自己騙自己",
+          "notes": [
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "強"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1.5,
+              "lyric": "慾"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "別"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "己"
+            },
+            {
+              "pitch": "G4",
+              "beats": 0.5,
+              "lyric": "騙"
+            },
+            {
+              "pitch": "A#4",
+              "beats": 0.5,
+              "lyric": "自"
+            },
+            {
+              "pitch": "A4",
+              "beats": 2,
+              "lyric": "己"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 41,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-063",
+          "lyric": "我要用冷暴力冷凍你O-k",
+          "notes": [
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "F4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "暴"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "力"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "冷"
+            },
+            {
+              "pitch": "C4",
+              "beats": 0.5,
+              "lyric": "凍"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1.5,
+              "lyric": "你"
+            },
+            {
+              "pitch": "D4",
+              "beats": 0.5,
+              "lyric": "O-"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "k"
+            },
+            {
+              "pitch": "G4",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 42,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        }
+      ]
+    }
+  ]
+}

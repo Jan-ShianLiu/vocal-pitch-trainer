@@ -1,0 +1,3184 @@
+{
+  "formatVersion": 1,
+  "id": "jianpu-space-183-661186182cce837239c1fc3f",
+  "title": "王妃",
+  "artist": "蕭敬騰",
+  "language": "zh-TW",
+  "genre": "Mandopop",
+  "vocalGender": "male",
+  "tags": [
+    "簡譜空間",
+    "Mandopop"
+  ],
+  "bpm": 127,
+  "key": "A major",
+  "source": "https://jianpu.space/zh-tw/songList/661186182cce837239c1fc3f",
+  "metadata": {
+    "sourceImage": "screenshot_183_jianpu.space.png",
+    "sourceArtistText": "蕭敬騰",
+    "numberedNotationTonic": "1=A3",
+    "keyBasis": "Read from the /key(...) directive in the source notation.",
+    "bpmBasis": "Read from the BPM directive in the source notation.",
+    "sectionBasis": "Each sung line was checked against the exact song's public labelled lyrics or chord/lyric form; section labels were rebuilt from that source rather than inferred from the previous JSON.",
+    "transcriptionRule": "Hyphens are folded into note duration. Same-pitch continuation notes for one lyric are merged; different-pitch melismas are retained with an empty lyric.",
+    "timeSignatureInferred": "4/4",
+    "controlNotationRule": "Key-change markers are removed from lyric text and applied cumulatively to the marked note and all following notes, matching the source parser. Structural labels such as intro/interlude are not treated as sung lyrics.",
+    "sectionResearch": {
+      "checkedAt": "2026-10-17",
+      "method": "source-labelled-lyrics-alignment",
+      "confidence": "high",
+      "sources": [
+        "https://www.shazam.com/zh-tw/song/1834583378/%E7%8E%8B%E5%A6%83"
+      ],
+      "sourceLyricLineCoverage": 0.8065
+    },
+    "lineBreakResearch": {
+      "checkedAt": "2026-10-17",
+      "method": "public-synchronized-lyric-line-alignment",
+      "provider": "NetEase Cloud Music public synchronized lyrics",
+      "source": "https://music.163.com/#/song?id=26075453",
+      "matchedTitle": "王妃 (Live)",
+      "matchedArtist": "萧敬腾",
+      "sourceLyricCoverage": 0.9468,
+      "confidenceGatePassed": true,
+      "splitOriginalLineCount": 27,
+      "createdAdditionalLineCount": 39,
+      "preservationChecks": {
+        "lyrics": "unchanged",
+        "notesPitchBeatsLyricsAndOrder": "unchanged"
+      }
+    }
+  },
+  "sections": [
+    {
+      "id": "verse-1",
+      "type": "verse",
+      "name": "主歌 1",
+      "lines": [
+        {
+          "id": "score-line-001",
+          "lyric": "Ohwhoa",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 2,
+              "lyric": ""
+            },
+            {
+              "rest": true,
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "Oh"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1.5,
+              "lyric": "whoa"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 3,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-002",
+          "lyric": "搖晃的紅酒杯",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "搖"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "晃"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "紅"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "酒"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1.5,
+              "lyric": "杯"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 4,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-003",
+          "lyric": "嘴唇像染著鮮血",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "嘴"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "唇"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "像"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "染"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "著"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "鮮"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "血"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 4,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-004",
+          "lyric": "那不尋常的美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "那"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "尋"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "常"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-005",
+          "lyric": "難赦免的罪",
+          "notes": [
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "難"
+            },
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "赦"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "免"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1,
+              "lyric": "罪"
+            },
+            {
+              "rest": true,
+              "beats": 0.5,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 5,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-006",
+          "lyric": "誰忠心的跟隨",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "誰"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "忠"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "心"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "跟"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1.5,
+              "lyric": "隨"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 6,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-007",
+          "lyric": "充其量當個侍衛",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "充"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "其"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "量"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "當"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "個"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "侍"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "衛"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 6,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-008",
+          "lyric": "腳下踩著玫瑰",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "腳"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "下"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "踩"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "著"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "玫"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 2,
+              "lyric": "瑰"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 7,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-009",
+          "lyric": "回敬一個吻當安慰",
+          "notes": [
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "回"
+            },
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "敬"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "一"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "個"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "吻"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "當"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "安"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "慰"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 7,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-010",
+          "lyric": "可憐",
+          "notes": [
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "可"
+            },
+            {
+              "pitch": "A3",
+              "beats": 3,
+              "lyric": "憐"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 8,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-011",
+          "lyric": "像蠢動的音樂",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "像"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "蠢"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "動"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "音"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1.5,
+              "lyric": "樂"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 9,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-012",
+          "lyric": "教人們怎麼成眠",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "教"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "人"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "們"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "怎"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "麼"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "成"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "眠"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 9,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-013",
+          "lyric": "不知名的香水",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "知"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "名"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "香"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 2,
+              "lyric": "水"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 10,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-014",
+          "lyric": "窒息的鬼魅",
+          "notes": [
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "窒"
+            },
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "息"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "鬼"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1,
+              "lyric": "魅"
+            },
+            {
+              "rest": true,
+              "beats": 0.5,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 10,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-015",
+          "lyric": "鋒利的高跟鞋",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "鋒"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "利"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "高"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "跟"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1.5,
+              "lyric": "鞋"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 11,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-016",
+          "lyric": "讓多少心腸破碎",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "讓"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "多"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "少"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "心"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "腸"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "破"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "碎"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 11,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-017",
+          "lyric": "彎刀一般的眉",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "彎"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "刀"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "一"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "般"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "眉"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 12,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-018",
+          "lyric": "捍衛妳的秘密花園",
+          "notes": [
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "捍"
+            },
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "衛"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "秘"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "密"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "花"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "園"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 12,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chorus-1",
+      "type": "chorus",
+      "name": "副歌 1",
+      "lines": [
+        {
+          "id": "score-line-019",
+          "lyric": "夜太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "夜"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 13,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-020",
+          "lyric": "儘管再危險",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "危"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1.5,
+              "lyric": "險"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 13,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-021",
+          "lyric": "總有人黑著眼眶熬著夜",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "總"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "人"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "黑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "著"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "眼"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "眶"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "熬"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "著"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "夜"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 13,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-022",
+          "lyric": "愛太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 14,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-023",
+          "lyric": "儘管再危險",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "危"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "險"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 14,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-024",
+          "lyric": "願賠上了一切超支千年的淚",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "願"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "賠"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "上"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "了"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "一"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "切"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "支"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "千"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "年"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "淚"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 14,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-025",
+          "lyric": "痛太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "痛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 15,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-026",
+          "lyric": "儘管再卑微",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "卑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1.5,
+              "lyric": "微"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 15,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-027",
+          "lyric": "也想嚐粉身碎骨的滋味",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "也"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "嚐"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "粉"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "身"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "碎"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "骨"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "滋"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "味"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 15,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-028",
+          "lyric": "妳太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-029",
+          "lyric": "儘管再無言",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "無"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "言"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-030",
+          "lyric": "我都想用石堆隔絕世界",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "都"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "石"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "堆"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "隔"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "絕"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "世"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "界"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 16,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-031",
+          "lyric": "我的王妃",
+          "notes": [
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "王"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "妃"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 17,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-032",
+          "lyric": "我要霸佔妳的美",
+          "notes": [
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "霸"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "妳"
+            },
+            {
+              "rest": true,
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "的"
+            },
+            {
+              "rest": true,
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "美"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 2.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "rest": true,
+              "beats": 0.5,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 17,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "verse-2",
+      "type": "verse",
+      "name": "主歌 2",
+      "lines": [
+        {
+          "id": "score-line-033",
+          "lyric": "那催情的音樂",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "那"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "催"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "情"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "音"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1.5,
+              "lyric": "樂"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 19,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-034",
+          "lyric": "聽起來多麼愚昧",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "聽"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "起"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "來"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "多"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "麼"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "愚"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "昧"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 19,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-035",
+          "lyric": "妳武裝的防備",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "武"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "裝"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "防"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 2,
+              "lyric": "備"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 20,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-036",
+          "lyric": "傷妳的是誰",
+          "notes": [
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "傷"
+            },
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1,
+              "lyric": "誰"
+            },
+            {
+              "rest": true,
+              "beats": 0.5,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 20,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-037",
+          "lyric": "靠近我一點點",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "靠"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "近"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "一"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "點"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "點"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 21,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-038",
+          "lyric": "是不一樣的世界",
+          "notes": [
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "是"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "不"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "一"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "樣"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "世"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "界"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 21,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-039",
+          "lyric": "安睡在我的肩",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "安"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "睡"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "在"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 2,
+              "lyric": "肩"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 22,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-040",
+          "lyric": "我用生命為妳加冕",
+          "notes": [
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "C#3",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "生"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "命"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "為"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "加"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "冕"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 22,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chorus-2",
+      "type": "chorus",
+      "name": "副歌 2",
+      "lines": [
+        {
+          "id": "score-line-041",
+          "lyric": "夜太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "夜"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 23,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-042",
+          "lyric": "儘管再危險",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "危"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1.5,
+              "lyric": "險"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 23,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-043",
+          "lyric": "總有人黑著眼眶熬著夜",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "總"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "人"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "黑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "著"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "眼"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "眶"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.75,
+              "lyric": "熬"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.75,
+              "lyric": "著"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "夜"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 23,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-044",
+          "lyric": "愛太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 24,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-045",
+          "lyric": "儘管再危險",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "危"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "險"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 24,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-046",
+          "lyric": "願賠上了一切超支千年的淚",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "願"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "賠"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "上"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "了"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "一"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "切"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "支"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "千"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "年"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "淚"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 24,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-047",
+          "lyric": "痛太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "痛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 25,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-048",
+          "lyric": "儘管再卑微",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "卑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1.5,
+              "lyric": "微"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 25,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-049",
+          "lyric": "也想嚐粉身碎骨的滋味",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "也"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "嚐"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "粉"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "身"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "碎"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "骨"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "滋"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "味"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 25,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-050",
+          "lyric": "妳太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 26,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-051",
+          "lyric": "儘管再無言",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "無"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "言"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 26,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-052",
+          "lyric": "我都想用石堆隔絕世界",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "都"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "石"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "堆"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "隔"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "絕"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "世"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "界"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 26,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-053",
+          "lyric": "我的王妃",
+          "notes": [
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "王"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "妃"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 27,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-054",
+          "lyric": "我要霸佔妳的美",
+          "notes": [
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "霸"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "D4",
+              "beats": 1,
+              "lyric": "妳"
+            },
+            {
+              "rest": true,
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.25,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "美"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 1.5,
+              "lyric": ""
+            },
+            {
+              "rest": true,
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 27,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-055",
+          "lyric": "啊",
+          "notes": [
+            {
+              "pitch": "F#4",
+              "beats": 3.5,
+              "lyric": "啊"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 29,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        },
+        {
+          "id": "score-line-056",
+          "lyric": "夜太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "夜"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 31,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-057",
+          "lyric": "儘管再危險",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "危"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1.5,
+              "lyric": "險"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 31,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-058",
+          "lyric": "總有人黑著眼眶熬著夜",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "總"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "有"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "人"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "黑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "著"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "眼"
+            },
+            {
+              "pitch": "E3",
+              "beats": 0.5,
+              "lyric": "眶"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.75,
+              "lyric": "熬"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.75,
+              "lyric": "著"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "夜"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 31,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-059",
+          "lyric": "愛太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "愛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 32,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-060",
+          "lyric": "儘管再危險",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "危"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "險"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 32,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-061",
+          "lyric": "願賠上了一切超支千年的淚",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "願"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "賠"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "上"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "了"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "一"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "切"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "超"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "支"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "千"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "年"
+            },
+            {
+              "pitch": "F#3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "淚"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 32,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-062",
+          "lyric": "痛太美",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 1,
+              "lyric": "痛"
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 33,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-063",
+          "lyric": "儘管再卑微",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "卑"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1.5,
+              "lyric": "微"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 33,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-064",
+          "lyric": "也想嚐粉身碎骨的滋味",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "也"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "嚐"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 1,
+              "lyric": "粉"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "身"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "碎"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "骨"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "滋"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "味"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": ""
+            },
+            {
+              "pitch": "E4",
+              "beats": 1,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 33,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-065",
+          "lyric": "妳太美",
+          "notes": [
+            {
+              "pitch": "A4",
+              "beats": 1,
+              "lyric": "妳"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 1,
+              "lyric": "太"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 2,
+              "lyric": "美"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 34,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-066",
+          "lyric": "儘管再無言",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "儘"
+            },
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "管"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "再"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "無"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "言"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 34,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-067",
+          "lyric": "我都想用石堆隔絕世界",
+          "notes": [
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A4",
+              "beats": 0.5,
+              "lyric": "都"
+            },
+            {
+              "pitch": "G#4",
+              "beats": 0.5,
+              "lyric": "想"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 0.5,
+              "lyric": "用"
+            },
+            {
+              "pitch": "B3",
+              "beats": 1,
+              "lyric": "石"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "堆"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "隔"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "絕"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "世"
+            },
+            {
+              "pitch": "A3",
+              "beats": 1,
+              "lyric": "界"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 34,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "3/3",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-068",
+          "lyric": "我的王妃",
+          "notes": [
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "的"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "王"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "妃"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 35,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "1/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-069",
+          "lyric": "我要霸佔妳的美",
+          "notes": [
+            {
+              "pitch": "E4",
+              "beats": 0.5,
+              "lyric": "我"
+            },
+            {
+              "pitch": "C#4",
+              "beats": 0.5,
+              "lyric": "要"
+            },
+            {
+              "pitch": "B3",
+              "beats": 0.5,
+              "lyric": "霸"
+            },
+            {
+              "pitch": "A3",
+              "beats": 0.5,
+              "lyric": "佔"
+            },
+            {
+              "pitch": "F#4",
+              "beats": 1,
+              "lyric": "妳"
+            },
+            {
+              "rest": true,
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "G#4",
+              "beats": 2,
+              "lyric": "的"
+            },
+            {
+              "pitch": "A4",
+              "beats": 7,
+              "lyric": "美"
+            },
+            {
+              "pitch": "B4",
+              "beats": 1,
+              "lyric": ""
+            },
+            {
+              "pitch": "C#5",
+              "beats": 4,
+              "lyric": ""
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 35,
+            "segmentationBasis": "Original notation L: lyric unit",
+            "sourceLineSegment": "2/2",
+            "lineBreakBasis": "public synchronized lyric line"
+          }
+        },
+        {
+          "id": "score-line-070",
+          "lyric": "Yeahyeahyeah",
+          "notes": [
+            {
+              "pitch": "C#5",
+              "beats": 1,
+              "lyric": "Yeah"
+            },
+            {
+              "pitch": "C#5",
+              "beats": 1,
+              "lyric": "yeah"
+            },
+            {
+              "pitch": "C#5",
+              "beats": 0.5,
+              "lyric": "yeah"
+            }
+          ],
+          "metadata": {
+            "sourceLyricLine": 36,
+            "segmentationBasis": "Original notation L: lyric unit"
+          }
+        }
+      ]
+    }
+  ]
+}
