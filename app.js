@@ -76,6 +76,8 @@ const els = {
 let audioCtx,
   analyser,
   micSource,
+  pitchHighpass,
+  pitchLowpass,
   stream,
   raf,
   progressRaf,
@@ -89,6 +91,17 @@ let audioCtx,
   lastPitch = null,
   voicedFrames = 0,
   hitFrames = 0;
+const PITCH_ANALYSIS_INTERVAL_MS = 16;
+
+// 從 350 降回 200。保有防斷線能力，但降低對舊聲音的「黏滯感」
+const PITCH_HOLD_MS = 200; 
+const pitchTracker = {
+  noiseFloor: 0.0015,
+  smoothedMidi: null,
+  recentMidis: [],
+  lastReliableAt: -Infinity,
+  lastAnalysisAt: -Infinity,
+};
 let mediaRecorder = null,
   recordingSessionId = 0,
   lastRecordingUrl = null,
@@ -202,6 +215,21 @@ function noteName(m) {
 }
 function freqToMidi(f) {
   return 69 + 12 * Math.log2(f / 440);
+}
+function median(values) {
+  if (!values.length) return null;
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  return sorted.length % 2
+    ? sorted[middle]
+    : (sorted[middle - 1] + sorted[middle]) / 2;
+}
+function resetPitchTracker() {
+  pitchTracker.noiseFloor = 0.0015;
+  pitchTracker.smoothedMidi = null;
+  pitchTracker.recentMidis.length = 0;
+  pitchTracker.lastReliableAt = -Infinity;
+  pitchTracker.lastAnalysisAt = -Infinity;
 }
 function pitchToMidi(value) {
   if (Number.isFinite(value)) return Math.round(value);
@@ -770,6 +798,8 @@ function clearAttemptTrace() {
   history.length = 0;
   voicedFrames = hitFrames = 0;
   lastPitch = null;
+  resetPitchTracker();
+  missingFrames = 0;
   els.score.textContent = "—";
   els.ring.classList.remove("good");
   els.currentNote.textContent = "—";
@@ -1043,10 +1073,18 @@ async function setupMic() {
       },
     });
     analyser = audioCtx.createAnalyser();
-    analyser.fftSize = 4096;
-    analyser.smoothingTimeConstant = 0.05;
+    analyser.fftSize = 2048;
+    analyser.smoothingTimeConstant = 0;
     micSource = audioCtx.createMediaStreamSource(stream);
-    micSource.connect(analyser);
+    pitchHighpass = audioCtx.createBiquadFilter();
+    pitchHighpass.type = "highpass";
+    pitchHighpass.frequency.value = 65;
+    pitchHighpass.Q.value = 0.7;
+    pitchLowpass = audioCtx.createBiquadFilter();
+    pitchLowpass.type = "lowpass";
+    pitchLowpass.frequency.value = 1400;
+    pitchLowpass.Q.value = 0.7;
+    micSource.connect(pitchHighpass).connect(pitchLowpass).connect(analyser);
     document.querySelector(".header-status").classList.add("live");
     els.micStatus.textContent = "麥克風已連線";
     return true;
@@ -1295,11 +1333,8 @@ function currentTarget(elapsed) {
   }
   return undefined;
 }
-function tick() {
+function tick(frameTime = performance.now()) {
   if (!listening) return;
-  const data = new Float32Array(analyser.fftSize);
-  analyser.getFloatTimeDomainData(data);
-  const freq = detectPitch(data, audioCtx.sampleRate);
   const elapsed = performance.now() - startAt,
     noteElapsed = elapsed - PRE_ROLL_MS,
     target = noteElapsed >= 0 ? currentTarget(noteElapsed) : null;
@@ -1309,7 +1344,7 @@ function tick() {
   }
   if (preparingToListen && noteElapsed >= 0) {
     preparingToListen = false;
-    setFeedback("", "開始唱吧", "橘色軌跡越靠近綠色目標帶越準");
+    setFeedback("", "開始唱吧", "粉色軌跡越靠近青色目標帶越準");
   }
   const targetMidi = target?.midi ?? null;
   els.targetNote.textContent = target
@@ -1317,60 +1352,195 @@ function tick() {
       ? noteName(targetMidi)
       : "休"
     : "準備";
-  let midi = null;
-  if (freq) {
-    midi = freqToMidi(freq);
-    lastPitch = midi;
-    els.currentNote.textContent = noteName(midi);
-    if (Number.isFinite(targetMidi)) {
-      const cents = (midi - targetMidi) * 100;
-      els.currentFreq.textContent = `${freq.toFixed(1)} Hz · ${cents > 0 ? "+" : ""}${Math.round(cents)} cents`;
-      els.needle.style.left = Math.max(0, Math.min(100, 50 + cents / 2.5)) + "%";
-      voicedFrames++;
-      if (Math.abs(cents) <= 40) hitFrames++;
-      els.score.textContent = Math.round((hitFrames / voicedFrames) * 100) + "%";
-    } else {
-      els.currentFreq.textContent = `${freq.toFixed(1)} Hz · ${target ? "休止符" : "準備區"}`;
+
+  if (frameTime - pitchTracker.lastAnalysisAt >= PITCH_ANALYSIS_INTERVAL_MS) {
+    pitchTracker.lastAnalysisAt = frameTime;
+    const data = new Float32Array(analyser.fftSize);
+    analyser.getFloatTimeDomainData(data);
+    
+    const rmsGate = Math.max(0.001, Math.min(0.015, pitchTracker.noiseFloor * 1.5));
+    const detection = detectPitch(data, audioCtx.sampleRate, rmsGate);
+    
+    if (!detection.frequency && detection.rms < 0.03) {
+      pitchTracker.noiseFloor = Math.max(
+        0.0008,
+        Math.min(0.006, pitchTracker.noiseFloor * 0.96 + detection.rms * 0.04),
+      );
     }
-  } else if (target && !Number.isFinite(targetMidi)) {
-    els.currentFreq.textContent = "休止符";
-  } else {
-    els.currentFreq.textContent = target ? "等待穩定聲音" : "準備區已開始錄音";
+    const tracked = stabilizePitch(detection, frameTime, targetMidi);
+    const midi = tracked?.midi ?? null;
+    if (tracked) {
+      lastPitch = midi;
+      els.currentNote.textContent = noteName(midi);
+      const freq = midiToFreq(midi);
+      if (Number.isFinite(targetMidi)) {
+        const cents = (midi - targetMidi) * 100;
+        els.currentFreq.textContent = `${freq.toFixed(1)} Hz · ${cents > 0 ? "+" : ""}${Math.round(cents)} cents${tracked.held ? " · 穩定中" : ""}`;
+        els.needle.style.left = Math.max(0, Math.min(100, 50 + cents / 2.5)) + "%";
+        if (tracked.reliable) {
+          voicedFrames++;
+          if (Math.abs(cents) <= 40) hitFrames++;
+          els.score.textContent = Math.round((hitFrames / voicedFrames) * 100) + "%";
+        }
+      } else {
+        els.currentFreq.textContent = `${freq.toFixed(1)} Hz · ${target ? "休止符" : "準備區"}`;
+      }
+    } else if (target && !Number.isFinite(targetMidi)) {
+      els.currentNote.textContent = "—";
+      els.needle.style.left = "50%";
+      els.currentFreq.textContent = "休止符";
+    } else {
+      els.currentNote.textContent = "—";
+      els.needle.style.left = "50%";
+      els.currentFreq.textContent = target ? "等待穩定聲音" : "準備區已開始錄音";
+    }
+    history.push({ midi, target: targetMidi, elapsed, held: Boolean(tracked?.held) });
+    if (history.length > 2400) history.shift();
   }
-  history.push({ midi, target: targetMidi, elapsed });
-  if (history.length > 2400) history.shift();
   draw();
   raf = requestAnimationFrame(tick);
 }
-function detectPitch(buf, sampleRate) {
+
+function detectPitch(buf, sampleRate, rmsGate = 0.0025) {
+  const frameSize = Math.min(2048, buf.length),
+    offset = buf.length - frameSize;
+  let mean = 0;
+  for (let i = 0; i < frameSize; i++) mean += buf[offset + i];
+  mean /= frameSize;
   let rms = 0;
-  for (const x of buf) rms += x * x;
-  rms = Math.sqrt(rms / buf.length);
-  if (rms < 0.012) return null;
-  const minLag = Math.floor(sampleRate / 1100),
-    maxLag = Math.min(Math.floor(sampleRate / 75), buf.length / 2);
-  let bestLag = -1,
-    best = 0;
-  for (let lag = minLag; lag <= maxLag; lag++) {
-    let corr = 0,
-      normA = 0,
-      normB = 0;
-    for (let i = 0; i < buf.length - lag; i++) {
-      const a = buf[i],
-        b = buf[i + lag];
-      corr += a * b;
-      normA += a * a;
-      normB += b * b;
+  const frame = new Float32Array(frameSize);
+  for (let i = 0; i < frameSize; i++) {
+    const value = buf[offset + i] - mean;
+    frame[i] = value;
+    rms += value * value;
+  }
+  rms = Math.sqrt(rms / frameSize);
+  if (rms < rmsGate)
+    return { frequency: null, confidence: 0, rms };
+
+  const minTau = Math.max(2, Math.floor(sampleRate / 1100)),
+    maxTau = Math.min(Math.floor(sampleRate / 65), Math.floor(frameSize / 2) - 1),
+    difference = new Float32Array(maxTau + 1),
+    normalized = new Float32Array(maxTau + 1);
+  for (let tau = 1; tau <= maxTau; tau++) {
+    let sum = 0;
+    const limit = frameSize - tau;
+    for (let i = 0; i < limit; i++) {
+      const delta = frame[i] - frame[i + tau];
+      sum += delta * delta;
     }
-    corr /= Math.sqrt(normA * normB) || 1;
-    if (corr > best) {
-      best = corr;
-      bestLag = lag;
+    difference[tau] = sum;
+  }
+  normalized[0] = 1;
+  let runningSum = 0;
+  for (let tau = 1; tau <= maxTau; tau++) {
+    runningSum += difference[tau];
+    normalized[tau] = runningSum ? (difference[tau] * tau) / runningSum : 1;
+  }
+
+  let bestTau = -1;
+  for (let tau = minTau; tau < maxTau; tau++) {
+    if (normalized[tau] < 0.25) {
+      while (tau + 1 <= maxTau && normalized[tau + 1] < normalized[tau]) tau++;
+      bestTau = tau;
+      break;
     }
   }
-  if (best < 0.62) return null;
-  return sampleRate / bestLag;
+  if (bestTau < 0) {
+    let bestValue = Infinity;
+    for (let tau = minTau; tau <= maxTau; tau++) {
+      if (normalized[tau] < bestValue) {
+        bestValue = normalized[tau];
+        bestTau = tau;
+      }
+    }
+    if (bestValue > 0.5)
+      return { frequency: null, confidence: Math.max(0, 1 - bestValue), rms };
+  }
+
+  const left = normalized[Math.max(minTau, bestTau - 1)],
+    center = normalized[bestTau],
+    right = normalized[Math.min(maxTau, bestTau + 1)],
+    denominator = left - 2 * center + right,
+    refinedTau = denominator
+      ? bestTau + Math.max(-0.5, Math.min(0.5, 0.5 * (left - right) / denominator))
+      : bestTau,
+    confidence = Math.max(0, Math.min(1, 1 - center));
+    
+  if (confidence < 0.4 || !Number.isFinite(refinedTau) || refinedTau <= 0)
+    return { frequency: null, confidence, rms };
+  return { frequency: sampleRate / refinedTau, confidence, rms };
 }
+
+function stabilizePitch(detection, now, targetMidi) {
+  const previous = pitchTracker.smoothedMidi;
+  let isReliable = false;
+
+  if (detection.frequency) {
+    if (detection.confidence >= 0.45) {
+      isReliable = true;
+    } else if (detection.confidence >= 0.25 && Number.isFinite(previous)) {
+      const rawMidi = freqToMidi(detection.frequency);
+      if (Math.abs(rawMidi - previous) < 2.5) {
+        isReliable = true;
+      }
+    }
+  }
+
+  if (isReliable) {
+    let rawMidi = freqToMidi(detection.frequency);
+    if (Number.isFinite(previous) && Math.abs(rawMidi - previous) > 7) {
+      const octaveCandidates = [rawMidi - 12, rawMidi + 12];
+      const corrected = octaveCandidates.reduce((best, candidate) =>
+        Math.abs(candidate - previous) < Math.abs(best - previous) ? candidate : best
+      );
+      const rawFitsTarget = Number.isFinite(targetMidi) &&
+        Math.abs(rawMidi - targetMidi) + 0.8 < Math.abs(corrected - targetMidi);
+      if (!rawFitsTarget && Math.abs(corrected - previous) < 4.5) rawMidi = corrected;
+    }
+
+    pitchTracker.recentMidis.push(rawMidi);
+    
+    // 配合 16ms 的高更新率，將視窗從 3 改為 5。
+    // 這樣能維持約 80ms 的抗干擾防斷線能力，但視覺跟隨速度提升一倍
+    if (pitchTracker.recentMidis.length > 5) pitchTracker.recentMidis.shift();
+
+    const stableMidi = median(pitchTracker.recentMidis);
+    const delta = Number.isFinite(previous) ? Math.abs(stableMidi - previous) : Infinity;
+    
+    // 放寬限速門檻並提高平滑值：0.75 在 60fps 下能極快貼合新音高，且不會因微小雜訊產生毛邊
+    const alpha = delta > 1.0 ? 0.95 : 0.75;
+    
+    pitchTracker.smoothedMidi = Number.isFinite(previous)
+      ? previous + (stableMidi - previous) * alpha
+      : stableMidi;
+    pitchTracker.lastReliableAt = now;
+
+    return {
+      midi: pitchTracker.smoothedMidi,
+      reliable: true,
+      held: false,
+      confidence: detection.confidence,
+    };
+  }
+
+  if (
+    Number.isFinite(pitchTracker.smoothedMidi) &&
+    now - pitchTracker.lastReliableAt <= PITCH_HOLD_MS
+  ) {
+    return {
+      midi: pitchTracker.smoothedMidi,
+      reliable: false,
+      held: true,
+      confidence: detection.confidence || 0,
+    };
+  }
+
+  pitchTracker.smoothedMidi = null;
+  pitchTracker.recentMidis.length = 0;
+  return null;
+}
+
 function resize() {
   const dpr = Math.min(devicePixelRatio || 1, 2),
     rect = canvas.getBoundingClientRect();
