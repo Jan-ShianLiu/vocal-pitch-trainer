@@ -216,6 +216,15 @@
           </button>
           <button class="secondary" id="newBtn"><span>↻</span> 換一題</button>
         </div>
+        <div class="playback-volume" aria-label="播放音量設定">
+          <div class="playback-volume-row">
+            <label for="playbackVolume">播放音量</label>
+            <input id="playbackVolume" type="range" min="50" max="400" step="10" value="100" aria-describedby="playbackVolumeHint" />
+            <output id="playbackVolumeValue" for="playbackVolume" aria-live="polite">100%</output>
+            <button id="playbackVolumeReset" class="secondary" type="button">還原 100%</button>
+          </div>
+          <small id="playbackVolumeHint">示範與錄音重播共用 · 放大後若有破音，請調低</small>
+        </div>
       </section>
 
       <section class="tips">

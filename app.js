@@ -16,6 +16,9 @@ const canvas = document.querySelector("#pitchRoll"),
   ctx = canvas.getContext("2d");
 const els = {
   micStatus: $("#micStatus"),
+  playbackVolume: $("#playbackVolume"),
+  playbackVolumeValue: $("#playbackVolumeValue"),
+  playbackVolumeReset: $("#playbackVolumeReset"),
   currentNote: $("#currentNote"),
   currentFreq: $("#currentFreq"),
   targetNote: $("#targetNote"),
@@ -91,9 +94,18 @@ let audioCtx,
   lastPitch = null,
   voicedFrames = 0,
   hitFrames = 0;
-const PITCH_ANALYSIS_INTERVAL_MS = 16;
+const PITCH_ANALYSIS_INTERVAL_MS = 32;
+let micSetupPromise = null;
+let micGeneration = 0;
+let micGraphNeedsRefresh = false;
+const PLAYBACK_VOLUME_KEY = "vocalFlowPlaybackVolume";
+let playbackVolume = loadPlaybackVolume();
+let playbackGain = null;
+let playbackGainContext = null;
+let replaySource = null;
+let replayRequestId = 0;
 
-// 從 350 降回 200。保有防斷線能力，但降低對舊聲音的「黏滯感」
+// 【更新】縮短為 200 毫秒。保有防斷線能力，但降低對舊聲音的「黏滯感」
 const PITCH_HOLD_MS = 200; 
 const pitchTracker = {
   noiseFloor: 0.0015,
@@ -799,7 +811,6 @@ function clearAttemptTrace() {
   voicedFrames = hitFrames = 0;
   lastPitch = null;
   resetPitchTracker();
-  missingFrames = 0;
   els.score.textContent = "—";
   els.ring.classList.remove("good");
   els.currentNote.textContent = "—";
@@ -945,13 +956,50 @@ async function loadPiano() {
   })();
   return pianoLoading;
 }
+function loadPlaybackVolume() {
+  try {
+    const saved = localStorage.getItem(PLAYBACK_VOLUME_KEY);
+    const value = saved === null ? 100 : Number(saved);
+    return Number.isFinite(value) ? Math.max(50, Math.min(400, value)) : 100;
+  } catch (error) {
+    return 100;
+  }
+}
+function getPlaybackOutput() {
+  if (!playbackGain || playbackGainContext !== audioCtx) {
+    playbackGain?.disconnect();
+    playbackGain = audioCtx.createGain();
+    playbackGainContext = audioCtx;
+    playbackGain.gain.value = playbackVolume / 100;
+    playbackGain.connect(audioCtx.destination);
+  }
+  return playbackGain;
+}
+function setPlaybackVolume(value) {
+  const number = Number(value);
+  playbackVolume = Number.isFinite(number) ? Math.max(50, Math.min(400, number)) : 100;
+  els.playbackVolume.value = String(playbackVolume);
+  els.playbackVolume.setAttribute("aria-valuetext", `${playbackVolume}%`);
+  els.playbackVolumeValue.textContent = `${playbackVolume}%`;
+  if (playbackGain && playbackGainContext === audioCtx && audioCtx.state !== "closed") {
+    const gain = playbackGain.gain;
+    gain.cancelScheduledValues(audioCtx.currentTime);
+    gain.setTargetAtTime(playbackVolume / 100, audioCtx.currentTime, 0.015);
+  }
+  try { localStorage.setItem(PLAYBACK_VOLUME_KEY, String(playbackVolume)); }
+  catch (error) { /* The current session still keeps the volume setting. */ }
+}
+function disconnectReplaySource() {
+  replaySource?.disconnect();
+  replaySource = null;
+}
 function synthFallback(midi, when, duration) {
   const master = audioCtx.createGain();
   master.gain.setValueAtTime(0.0001, when);
   master.gain.exponentialRampToValueAtTime(0.2, when + 0.008);
   master.gain.exponentialRampToValueAtTime(0.045, when + 0.23);
   master.gain.exponentialRampToValueAtTime(0.0001, when + duration + 0.45);
-  master.connect(audioCtx.destination);
+  master.connect(getPlaybackOutput());
   [1, 2, 3, 4].forEach((h, i) => {
     const o = audioCtx.createOscillator(),
       g = audioCtx.createGain();
@@ -982,7 +1030,7 @@ function pianoNote(midi, when, duration) {
   gain.gain.exponentialRampToValueAtTime(0.72, when + 0.008);
   gain.gain.setValueAtTime(0.72, when + Math.max(0.04, duration - 0.08));
   gain.gain.exponentialRampToValueAtTime(0.0001, when + duration + 0.7);
-  source.connect(gain).connect(audioCtx.destination);
+  source.connect(gain).connect(getPlaybackOutput());
   activeAudioNodes.add(source);
   source.onended = () => activeAudioNodes.delete(source);
   source.start(when);
@@ -998,7 +1046,7 @@ async function playDemo() {
   cancelCurrentFlow();
   stopReplay();
   const runId = flowId;
-  ensureAudio();
+  if (!(await ensureAudio()) || runId !== flowId) return;
 
   els.demo.disabled = false;
   els.demo.innerHTML = "<span>■</span> 停止示範";
@@ -1048,53 +1096,170 @@ async function playDemo() {
   resetDemoButton();
   setFeedback("", "示範播放完成", "準備好後直接按「開始錄音」");
 }
-function ensureAudio() {
-  if (!audioCtx)
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  if (audioCtx.state === "suspended") audioCtx.resume();
-}
-async function setupMic() {
-  ensureAudio();
-  if (stream) return true;
-  if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia) {
-    setFeedback(
-      "warn",
-      "此網址無法使用麥克風",
-      "請改用 GitHub Pages 的 HTTPS 網址，並使用最新版 Safari、Chrome 或 Edge",
-    );
+// Permissions belong to the browser. A saved permission is not a live audio stream.
+async function ensureAudio() {
+  try {
+    if (!audioCtx || audioCtx.state === "closed") {
+      disconnectMicGraph();
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      audioCtx.onstatechange = () => {
+        if (audioCtx.state !== "running" && listening) {
+          cancelCurrentFlow();
+          micGraphNeedsRefresh = true;
+          setMicStatus("音訊已中斷，請點開始錄音", false);
+          setFeedback("warn", "音訊已中斷", "回到此頁後，請再按一次開始錄音或只聽示範");
+        }
+      };
+    }
+    // Safari can use interrupted, in addition to suspended.
+    if (audioCtx.state !== "running") {
+      let timer;
+      try {
+        await Promise.race([
+          audioCtx.resume(),
+          new Promise((_, reject) => {
+            timer = setTimeout(() => reject(new Error("Audio resume timed out")), 4000);
+          }),
+        ]);
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+    if (audioCtx.state !== "running") throw new Error("Audio context is not running");
+    return true;
+  } catch (error) {
+    console.warn("Audio could not resume", error);
+    setMicStatus("音訊待恢復", false);
+    setFeedback("warn", "音訊尚未恢復", "請確認已回到此分頁，再按一次開始錄音或只聽示範");
     return false;
   }
-  try {
-    stream = await navigator.mediaDevices.getUserMedia({
-      audio: {
-        echoCancellation: false,
-        noiseSuppression: false,
-        autoGainControl: false,
-      },
-    });
-    analyser = audioCtx.createAnalyser();
-    analyser.fftSize = 2048;
-    analyser.smoothingTimeConstant = 0;
-    micSource = audioCtx.createMediaStreamSource(stream);
-    pitchHighpass = audioCtx.createBiquadFilter();
-    pitchHighpass.type = "highpass";
-    pitchHighpass.frequency.value = 65;
-    pitchHighpass.Q.value = 0.7;
-    pitchLowpass = audioCtx.createBiquadFilter();
-    pitchLowpass.type = "lowpass";
-    pitchLowpass.frequency.value = 1400;
-    pitchLowpass.Q.value = 0.7;
-    micSource.connect(pitchHighpass).connect(pitchLowpass).connect(analyser);
-    document.querySelector(".header-status").classList.add("live");
-    els.micStatus.textContent = "麥克風已連線";
-    return true;
-  } catch (e) {
-    setFeedback(
-      "warn",
-      "無法開啟麥克風",
-      "請允許瀏覽器使用麥克風，並確認頁面使用 HTTPS",
-    );
-    return false;
+}
+function setMicStatus(text, live = false) {
+  document.querySelector(".header-status").classList.toggle("live", live);
+  els.micStatus.textContent = text;
+}
+function disconnectMicGraph() {
+  for (const node of [micSource, pitchHighpass, pitchLowpass, analyser]) {
+    try { node?.disconnect(); } catch (error) { /* Already disconnected. */ }
+  }
+  micSource = pitchHighpass = pitchLowpass = analyser = null;
+}
+function releaseMic() {
+  micGeneration++;
+  micSetupPromise = null;
+  const oldStream = stream;
+  stream = null;
+  disconnectMicGraph();
+  oldStream?.getTracks().forEach((track) => track.stop());
+  setMicStatus("麥克風未連線");
+}
+function hasUsableMic() {
+  return Boolean(stream?.active && stream.getAudioTracks().some(
+    (track) => track.readyState === "live" && track.enabled && !track.muted,
+  ));
+}
+function micInterrupted(message) {
+  if (listening) {
+    // Do not score a take interrupted by the system or an unplugged microphone.
+    cancelCurrentFlow();
+    setFeedback("warn", "麥克風收音中斷", "請按開始錄音重新連接；若仍無聲，點頁首麥克風狀態重連");
+  }
+  micGraphNeedsRefresh = true;
+  setMicStatus(message, false);
+}
+function setupMic() {
+  // Call resume immediately inside the click handler, before awaiting permission.
+  const audioReady = ensureAudio();
+  if (!window.isSecureContext || !navigator.mediaDevices?.getUserMedia) {
+    setFeedback("warn", "此網址無法使用麥克風", "請改用 GitHub Pages 的 HTTPS 網址，並使用最新版 Safari、Chrome 或 Edge");
+    return Promise.resolve(false);
+  }
+  if (micSetupPromise) return micSetupPromise;
+  const generation = micGeneration;
+  const task = (async () => {
+    try {
+      if (!hasUsableMic()) {
+        const oldStream = stream;
+        stream = null;
+        disconnectMicGraph();
+        oldStream?.getTracks().forEach((track) => track.stop());
+        setMicStatus("正在連接麥克風…");
+        const acquired = await navigator.mediaDevices.getUserMedia({
+          audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false },
+        });
+        // A permission prompt may finish after the page has been left.
+        if (generation !== micGeneration || document.hidden) {
+          acquired.getTracks().forEach((track) => track.stop());
+          return false;
+        }
+        stream = acquired;
+        const ownedStream = stream;
+        stream.getAudioTracks().forEach((track) => {
+          track.addEventListener("ended", () => {
+            if (stream === ownedStream) micInterrupted("麥克風已斷線");
+          });
+          track.addEventListener("mute", () => {
+            if (stream === ownedStream) micInterrupted("麥克風暫時無法收音");
+          });
+        });
+      }
+      const wasReady = await audioReady;
+      if (generation !== micGeneration || document.hidden) return false;
+      // The permission dialog itself may have interrupted the context.
+      if ((!wasReady || audioCtx.state !== "running") && !(await ensureAudio())) return false;
+      if (generation !== micGeneration || document.hidden) return false;
+      if (!hasUsableMic()) {
+        micInterrupted("麥克風暫時無法收音");
+        setFeedback("warn", "麥克風尚未就緒", "請確認其他應用程式沒有佔用麥克風，再按開始錄音");
+        return false;
+      }
+      if (!analyser || micGraphNeedsRefresh) {
+        disconnectMicGraph();
+        analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 2048;
+        analyser.smoothingTimeConstant = 0;
+        micSource = audioCtx.createMediaStreamSource(stream);
+        pitchHighpass = audioCtx.createBiquadFilter();
+        pitchHighpass.type = "highpass";
+        pitchHighpass.frequency.value = 65;
+        pitchHighpass.Q.value = 0.7;
+        pitchLowpass = audioCtx.createBiquadFilter();
+        pitchLowpass.type = "lowpass";
+        pitchLowpass.frequency.value = 1400;
+        pitchLowpass.Q.value = 0.7;
+        micSource.connect(pitchHighpass).connect(pitchLowpass).connect(analyser);
+        micGraphNeedsRefresh = false;
+      }
+      setMicStatus("麥克風已連線（點此重連）", true);
+      return true;
+    } catch (error) {
+      if (generation !== micGeneration) return false;
+      console.warn("Microphone setup failed", error);
+      releaseMic();
+      const hints = {
+        NotAllowedError: "請到網址列的網站設定，將麥克風改為允許；若已允許，也請檢查系統的瀏覽器麥克風權限。網頁無法強制授權。",
+        SecurityError: "瀏覽器禁止此頁使用麥克風，請檢查網站權限與 HTTPS 網址。",
+        NotFoundError: "找不到麥克風，請確認裝置已連接。",
+        NotReadableError: "麥克風無法讀取，請關閉可能佔用它的應用程式，再重試。",
+        AbortError: "麥克風連線中斷，請再按一次開始錄音。",
+      };
+      setFeedback("warn", "無法開啟麥克風", hints[error.name] || "請確認麥克風與系統權限正常，再點頁首麥克風狀態重連。");
+      return false;
+    }
+  })();
+  micSetupPromise = task;
+  task.finally(() => {
+    if (micSetupPromise === task) micSetupPromise = null;
+  });
+  return task;
+}
+async function reconnectMic() {
+  cancelCurrentFlow();
+  stopReplay();
+  releaseMic();
+  const requestId = flowId;
+  if (await setupMic() && requestId === flowId) {
+    setFeedback("", "麥克風已重新連接", "準備好後按開始錄音");
   }
 }
 function updateReplayButton() {
@@ -1103,6 +1268,8 @@ function updateReplayButton() {
     els.replay.innerHTML = "<span>↺</span> 重播我的聲音";
 }
 function stopReplay(showFullTrace = true) {
+  replayRequestId++;
+  disconnectReplaySource();
   cancelAnimationFrame(replayRaf);
   replayRaf = 0;
   if (replayAudio) {
@@ -1162,14 +1329,27 @@ function stopMediaCapture(keepRecording) {
     }
   }
 }
-function replayLastRecording() {
+async function replayLastRecording() {
   if (!lastRecordingUrl || listening || demoing) return;
   if (replaying) {
     stopReplay();
     return;
   }
   stopReplay(false);
-  replayAudio = new Audio(lastRecordingUrl);
+  const requestId = replayRequestId;
+  const recordingUrl = lastRecordingUrl;
+  if (!(await ensureAudio()) || requestId !== replayRequestId ||
+      recordingUrl !== lastRecordingUrl || listening || demoing) return;
+  replayAudio = new Audio(recordingUrl);
+  try {
+    replaySource = audioCtx.createMediaElementSource(replayAudio);
+    replaySource.connect(getPlaybackOutput());
+  } catch (error) {
+    stopReplay();
+    setFeedback("warn", "無法重播錄音", "音訊輸出無法連接，請重新整理後再試");
+    return;
+  }
+  const playingAudio = replayAudio;
   replaying = true;
   replayElapsed = 0;
   const visualDuration = PRE_ROLL_MS + exerciseDuration();
@@ -1184,6 +1364,8 @@ function replayLastRecording() {
     replayRaf = requestAnimationFrame(animateReplay);
   };
   replayAudio.onended = () => {
+    if (replayAudio !== playingAudio) return;
+    disconnectReplaySource();
     cancelAnimationFrame(replayRaf);
     replayRaf = 0;
     replayElapsed = visualDuration;
@@ -1194,6 +1376,8 @@ function replayLastRecording() {
     updateReplayButton();
   };
   replayAudio.onerror = () => {
+    if (replayAudio !== playingAudio) return;
+    disconnectReplaySource();
     cancelAnimationFrame(replayRaf);
     replayRaf = 0;
     replaying = false;
@@ -1203,9 +1387,12 @@ function replayLastRecording() {
     setFeedback("warn", "無法重播錄音", "這個瀏覽器無法播放剛才的錄音格式");
   };
   replayAudio.play().then(() => {
+    if (replayAudio !== playingAudio) return;
     els.replay.innerHTML = "<span>■</span> 停止重播";
     animateReplay();
   }).catch(() => {
+    if (replayAudio !== playingAudio) return;
+    disconnectReplaySource();
     replaying = false;
     replayAudio = null;
     draw();
@@ -1218,7 +1405,8 @@ async function startFlow() {
   const requestId = flowId;
   if (!(await setupMic())) return;
   if (requestId !== flowId) return;
-  await beginListening();
+  if (!exercise || document.hidden) return;
+  beginListening();
 }
 function beginListening() {
   stopListening();
@@ -1304,7 +1492,7 @@ function finish(completed = false) {
         : "先看橘線偏高或偏低，再跟鋼琴校準一次",
     );
   els.start.textContent = "再唱一次";
-  els.start.onclick = beginListening;
+  els.start.onclick = startFlow;
 
   if (battle.active) {
     battleRecorded = true;
@@ -1333,6 +1521,8 @@ function currentTarget(elapsed) {
   }
   return undefined;
 }
+
+// 【替換 2】加入優化過的 tick
 function tick(frameTime = performance.now()) {
   if (!listening) return;
   const elapsed = performance.now() - startAt,
@@ -1358,6 +1548,7 @@ function tick(frameTime = performance.now()) {
     const data = new Float32Array(analyser.fftSize);
     analyser.getFloatTimeDomainData(data);
     
+    // 放寬收音門檻，降低底線，並減少倍率
     const rmsGate = Math.max(0.001, Math.min(0.015, pitchTracker.noiseFloor * 1.5));
     const detection = detectPitch(data, audioCtx.sampleRate, rmsGate);
     
@@ -1401,6 +1592,7 @@ function tick(frameTime = performance.now()) {
   raf = requestAnimationFrame(tick);
 }
 
+// 【替換 3】加入優化過的 detectPitch
 function detectPitch(buf, sampleRate, rmsGate = 0.0025) {
   const frameSize = Math.min(2048, buf.length),
     offset = buf.length - frameSize;
@@ -1472,6 +1664,7 @@ function detectPitch(buf, sampleRate, rmsGate = 0.0025) {
   return { frequency: sampleRate / refinedTau, confidence, rms };
 }
 
+// 【替換 4】加入優化過的 stabilizePitch，提高靈敏度，降低黏滯感
 function stabilizePitch(detection, now, targetMidi) {
   const previous = pitchTracker.smoothedMidi;
   let isReliable = false;
@@ -1501,15 +1694,14 @@ function stabilizePitch(detection, now, targetMidi) {
 
     pitchTracker.recentMidis.push(rawMidi);
     
-    // 配合 16ms 的高更新率，將視窗從 3 改為 5。
-    // 這樣能維持約 80ms 的抗干擾防斷線能力，但視覺跟隨速度提升一倍
-    if (pitchTracker.recentMidis.length > 5) pitchTracker.recentMidis.shift();
+    // 縮小濾波器視窗，從 5 降到 3，大幅縮減延遲
+    if (pitchTracker.recentMidis.length > 3) pitchTracker.recentMidis.shift();
 
     const stableMidi = median(pitchTracker.recentMidis);
     const delta = Number.isFinite(previous) ? Math.abs(stableMidi - previous) : Infinity;
     
-    // 放寬限速門檻並提高平滑值：0.75 在 60fps 下能極快貼合新音高，且不會因微小雜訊產生毛邊
-    const alpha = delta > 1.0 ? 0.95 : 0.75;
+    // 放寬大跳音的限速：改變超過 1.5 半音就給予 95% 速度，小抖動則保有 65% 平滑
+    const alpha = delta > 1.5 ? 0.95 : 0.65;
     
     pitchTracker.smoothedMidi = Number.isFinite(previous)
       ? previous + (stableMidi - previous) * alpha
@@ -1909,6 +2101,30 @@ els.next.onclick = () => {
   }
 };
 
+els.playbackVolume.oninput = () => setPlaybackVolume(els.playbackVolume.value);
+els.playbackVolumeReset.onclick = () => setPlaybackVolume(100);
+setPlaybackVolume(playbackVolume);
+
+// Keep a working stream within a visit; reconnect only after an actual interruption.
+els.micStatus.setAttribute("role", "button");
+els.micStatus.setAttribute("tabindex", "0");
+els.micStatus.title = "收不到聲音時，點此重新連接麥克風";
+els.micStatus.style.cursor = "pointer";
+els.micStatus.onclick = reconnectMic;
+els.micStatus.onkeydown = (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    reconnectMic();
+  }
+};
+document.addEventListener("visibilitychange", () => {
+  // Recheck the input graph on the next recording; keep existing practice behavior.
+  if (document.hidden && stream) micGraphNeedsRefresh = true;
+});
+window.addEventListener("pagehide", releaseMic);
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) setMicStatus("請按開始錄音連接麥克風", false);
+});
 window.addEventListener("resize", resize);
 window.addEventListener("focus", updateGoalDisplay);
 function wait(ms) {

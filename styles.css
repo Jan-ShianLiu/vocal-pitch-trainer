@@ -938,3 +938,31 @@ footer p {
 }
 .battle-score-row:last-child { border: none; }
 .battle-score-row b { color: var(--mint); font-size: 20px;}
+
+/* Playback volume control only. */
+.playback-volume {
+  max-width: 660px;
+  margin: 18px auto 0;
+  color: #b5becc;
+  font-size: 13px;
+}
+.playback-volume-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.playback-volume label, .playback-volume output { white-space: nowrap; }
+.playback-volume output { min-width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+.playback-volume input { flex: 1; min-width: 60px; accent-color: #a56dff; }
+.playback-volume button {
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.playback-volume small { display: block; margin-top: 8px; color: #8995a8; }
+@media (max-width: 480px) {
+  .playback-volume-row { gap: 7px; }
+  .playback-volume button { padding: 7px; font-size: 12px; }
+}
